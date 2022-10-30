@@ -1,11 +1,9 @@
 
 def get_count_char(str_):
     d = {} # TODO посчитать количество каждой буквы в строке в аргументе str_
-    count_char = str_.lower().split()
-    count_char.sort()
-    count_char = ''.join(count_char)
-    for letter in count_char:
-        d[letter] = d.get(letter, 0) + 1
+    for letter in str_.lower():
+        if letter.isalpha():
+            d[letter] = d.get(letter, 0) + 1
     return d
 
 
